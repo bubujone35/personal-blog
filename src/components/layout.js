@@ -8,6 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import Main from "./main"
+import Sidebar from "./sidebar"
 
 import "./layout.css"
 
@@ -22,10 +25,20 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const Container = styled.div`
+    display: flex; 
+    max-width: 120rem;
+    margin: 4rem auto;
+    background-color: orangered;
+  `
+
   return (
     <>
+      <Container>
         <main>{children}</main>
-      
+        <Sidebar/>
+        <Main/>
+      </Container>
     </>
   )
 }
