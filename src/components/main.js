@@ -6,7 +6,7 @@ const Container = styled.div`
   flex: 1;
   background-color: green;
   /* For Testing Purposes */
-  height: 50rem;
+  height: 80rem;
 `
 
 const Main = () => (
