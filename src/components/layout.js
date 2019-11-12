@@ -26,17 +26,18 @@ const Layout = ({ children }) => {
   `)
 
   const Container = styled.div`
-    display: flex; 
+    display: flex;
     max-width: 120rem;
     margin: 4rem auto;
     background-color: orangered;
   `
+  
 
   return (
     <>
       <Container>
-        <main>{children}</main>
         <Sidebar/>
+          <main>{children}</main>
         <Main/>
       </Container>
     </>
