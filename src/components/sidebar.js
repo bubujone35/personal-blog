@@ -25,12 +25,13 @@ const Intro = styled.div`
   justify-content: center;
   align-items: center;
   padding: 3rem;
-  margin-top: 3rem; 
+  margin-top: 3rem;
 `
 const Avatar = styled.div`
   border-radius: 100%;
   height: 12rem;
   width: 12rem;
+  margin: 1rem; 
 `
 const Name = styled.h1`
   font-size: 3rem;

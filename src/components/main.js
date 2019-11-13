@@ -5,10 +5,10 @@ import PreviewCard from "./cards/preview-card"
 const Container = styled.div`
   display: flex;
   flex: 1;
-  background-color: green;
+  background-color: lightgray;
   padding: 4rem;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 `
 
 const Main = () => (
