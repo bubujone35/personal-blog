@@ -30,8 +30,15 @@ const Layout = ({ children }) => {
     max-width: 120rem;
     margin: 4rem auto;
     background-color: orangered;
+
+    flex-flow: row-wrap;
+
+    @media all and (max-width: 1250px) {
+      margin: 0;
+      flex-direction: column;
+    }
   `
-  
+
 
   return (
     <>

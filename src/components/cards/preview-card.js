@@ -13,6 +13,12 @@ const Container = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   padding: 3rem;
   margin: 1rem;
+  max-width: 900px;
+  min-width: 550px; 
+
+  @media all and (max-width: 1250px) {
+    flex-direction: column-reverse;
+  }
 `
 const LeftColumn = styled.div`
   background-color: white;
@@ -27,7 +33,14 @@ const RightColumn =  styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+  padding: 2rem;
+  flex-direction: column;
+
+  @media all and (max-width: 1250px) {
+    padding: 0;
+    align-items: start;
+  }
+ `
 const Header = styled.div`
   background-color: white;
   color: black;
@@ -77,11 +90,15 @@ const Content = styled.div`
 `
 const Footer = styled.div`
   background-color: white;
-  padding: 1rem 0; 
+  padding: 1rem 0;
 `
 const Image = styled.img`
   border-radius: 12px;
   margin: 1rem;
+
+  @media all and (max-width: 1250px) {
+    margin: 0;
+  }
 `
 
 const PreviewCard = props => (

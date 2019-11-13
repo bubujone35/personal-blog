@@ -9,6 +9,10 @@ const Container = styled.div`
   padding: 4rem;
   flex-direction: column;
   align-items: center;
+
+  @media all and (max-width: 1250px) {
+    padding: 0;
+  }
 `
 
 const Main = () => (

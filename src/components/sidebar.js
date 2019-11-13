@@ -15,6 +15,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media all and (max-width: 1250px) {
+  
+    flex-direction: column;
+  }
 `
 // //////////////////////////////////////
 // Intro
@@ -26,24 +31,44 @@ const Intro = styled.div`
   align-items: center;
   padding: 3rem;
   margin-top: 3rem;
+  @media all and (max-width: 1250px) {
+    display: none;
+  }
 `
 const Avatar = styled.div`
   border-radius: 100%;
   height: 12rem;
   width: 12rem;
-  margin: 1rem; 
+  margin: 1rem;
+  @media all and (max-width: 1250px) {
+    display: none;
+  }
 `
 const Name = styled.h1`
   font-size: 3rem;
   font-weight: 300;
+  @media all and (max-width: 1250px) {
+    display: none;
+  }
 `
 
 const Content = styled.div`
-
+  @media all and (max-width: 1250px) {
+    display: none;
+  }
 `
 
 // //////////////////////////////////////
 // Sidebar navigation links
+const NavWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media all and (max-width: 1250px) {
+    flex-direction: row;
+  }
+`
+
 const SideNav = styled.ul`
   font-size: 1.8rem;
   list-style: none;
@@ -107,6 +132,9 @@ const Legal = styled.div`
   font-size: 1.2rem;
   text-align: center;
   padding: 2.5rem;
+  @media all and (max-width: 1250px) {
+    display: none;
+  }
 `
 
 const Sidebar = () => (
@@ -122,6 +150,7 @@ const Sidebar = () => (
         My name is Ryan Lee
       </Content>
     </Intro>
+    <NavWrapper>
     <SideNav>
       <SideNavItem>
         <StyledLink to="/">
@@ -142,6 +171,7 @@ const Sidebar = () => (
         </StyledLink>
       </SideNavItem>
     </SideNav>
+    </NavWrapper>
     <Legal>&copy; 2019 All rights reserved.</Legal>
   </Container>
 )
