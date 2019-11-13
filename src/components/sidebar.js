@@ -74,9 +74,9 @@ const SideNav = styled.ul`
 const SideNavItem = styled.li`
   position: relative;
 
-  &:not(:last-child) {
+  /* &:not(:last-child) {
     margin-bottom: 0.5rem;
-  }
+  } */
 
   &::before {
     content: "";
