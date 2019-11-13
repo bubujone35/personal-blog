@@ -6,9 +6,6 @@ import { FaAddressCard } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import avatar from '../images/headshot.png'
 
-
-
-
 const Container = styled.div`
   flex: 0 0 18%;
   background-color: white;
@@ -17,8 +14,14 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media all and (max-width: 1250px) {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    align-items: center;
   }
 `
 // //////////////////////////////////////
@@ -28,25 +31,28 @@ const Intro = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   padding: 3rem;
   margin-top: 3rem;
   @media all and (max-width: 1250px) {
-    display: none;
+    order: 1;
+    padding: 0;
+    margin: 0;
   }
 `
 const Avatar = styled.div`
   border-radius: 100%;
-  height: 12rem;
-  width: 12rem;
+  height: 10rem;
+  width: 10rem;
   margin: 1rem;
   @media all and (max-width: 1250px) {
-    display: none;
+    height: 4rem;
+    width: 4rem;
   }
 `
 const Name = styled.h1`
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 700;
   @media all and (max-width: 1250px) {
     display: none;
   }
@@ -65,38 +71,16 @@ const SideNav = styled.ul`
   flex-grow: 2;
 
   @media all and (max-width: 1250px) {
-    margin-top: 1rem;
+    margin-top: 0rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    margin-left: 3rem; 
   }
 `
 const SideNavItem = styled.li`
   position: relative;
 
-  &:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background-color: lightgray;
-    transform: scaleY(0);
-    transition: transform .2s,
-                width .4s cubic-bezier(1,0,0,1) .2s;
-
-  }
-
-  &:hover::before {
-    transform: scaleY(1);
-    width: 100%;
-    color: black;
-  }
 `
 
 const Icon = styled.svg`
@@ -122,17 +106,27 @@ const StyledLink = styled(Link)`
   position: relative;
   margin-right: 1rem;
   &:hover {
-    color: black;
+    color: lightgray;
   }
 
   display: flex;
   align-items: center;
+
+  @media all and (max-width: 6500px) {
+    padding: 1rem;
+  }
 `
 
 const Legal = styled.div`
   font-size: 1.2rem;
   text-align: center;
   padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
   @media all and (max-width: 1250px) {
     display: none;
   }

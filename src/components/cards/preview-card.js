@@ -19,6 +19,8 @@ const Container = styled.div`
 
   @media all and (max-width: 1250px) {
     flex-direction: column-reverse;
+    border-radius: 0px;
+    border: none;
   }
 `
 const LeftColumn = styled.div`
@@ -46,8 +48,15 @@ const Header = styled.div`
   background-color: white;
   color: black;
 `
-const Title = styled.h2`
+const Title = styled(Link)`
   font-size: 4rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+
+  &:hover {
+    color: gray;
+  }
 `
 
 const Subtitle = styled.h3`
@@ -86,6 +95,13 @@ const Stars = styled.svg`
   margin-right: 1.5rem;
   color: #FADB14;
   margin-bottom: -1rem;
+
+  @media all and (max-width: 1250px) {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.4rem;
+
+  }
 `
 
 const Content = styled.div`
@@ -97,6 +113,7 @@ const Content = styled.div`
 const Footer = styled.div`
   background-color: white;
   padding: 1rem 0;
+  margin-top: 1rem; 
 `
 const Image = styled.img`
   border-radius: 12px;
@@ -112,7 +129,7 @@ const PreviewCard = props => (
     <Container>
       <LeftColumn>
         <Header>
-          <Title>This is the title</Title>
+          <Title to="/">This is the title</Title>
           <Subtitle>Here is a subtitle</Subtitle>
           <Meta>
             <Hashtags>

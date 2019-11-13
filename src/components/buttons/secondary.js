@@ -6,7 +6,7 @@ const SecondaryButton = styled.button`
   background-color: transparent;
   color: blue;
   background-repeat: no-repeat;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   text-align: center;
   outline: none;
