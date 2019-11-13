@@ -10,15 +10,15 @@ const Container = styled.div`
   display: flex;
   background: #FCFCFC;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
   padding: 3rem;
   margin: 1rem;
   max-width: 900px;
-  min-width: 450px;
+  min-width: 400px;
 
   @media all and (max-width: 1250px) {
     flex-direction: column-reverse;
-    padding: 2rem;
   }
 `
 const LeftColumn = styled.div`
@@ -68,6 +68,11 @@ const Tag = styled(Link)`
   text-decoration: none;
   margin: .2rem;
   color: blue;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
 `
 const Icons = styled.div`
   display: flex;
@@ -79,13 +84,13 @@ const Stars = styled.svg`
   width: 3rem;
   height: 3rem;
   margin-right: 1.5rem;
-  color: black;
+  color: #FADB14;
   margin-bottom: -1rem;
 `
 
 const Content = styled.div`
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
   margin: 1rem 0;
 `

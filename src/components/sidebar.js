@@ -11,14 +11,14 @@ import avatar from '../images/headshot.png'
 
 const Container = styled.div`
   flex: 0 0 18%;
-  background-color: gray;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   @media all and (max-width: 1250px) {
-
     flex-direction: column;
+    width: 100%;
   }
 `
 // //////////////////////////////////////
@@ -68,7 +68,7 @@ const SideNav = styled.ul`
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: center;
   }
 `
 const SideNavItem = styled.li`
@@ -85,7 +85,7 @@ const SideNavItem = styled.li`
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: orangered;
+    background-color: lightgray;
     transform: scaleY(0);
     transition: transform .2s,
                 width .4s cubic-bezier(1,0,0,1) .2s;
@@ -114,14 +114,14 @@ const StyledLink = styled(Link)`
   /* font-weight: 700; */
   text-transform: uppercase;
   font-size: 2rem;
-  color: white;
+  color: black;
   display: block;
   padding: 1rem 3rem;
   z-index: 10;
   position: relative;
   margin-right: 1rem;
   &:hover {
-    color: black;
+    color: lightgray;
   }
 
   display: flex;

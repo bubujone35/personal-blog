@@ -5,7 +5,7 @@ import PreviewCard from "./cards/preview-card"
 const Container = styled.div`
   display: flex;
   flex: 1;
-  background-color: lightgray;
+  background-color: white;
   padding: 4rem;
   flex-direction: column;
   align-items: center;
