@@ -14,10 +14,11 @@ const Container = styled.div`
   padding: 3rem;
   margin: 1rem;
   max-width: 900px;
-  min-width: 550px; 
+  min-width: 450px;
 
   @media all and (max-width: 1250px) {
     flex-direction: column-reverse;
+    padding: 2rem;
   }
 `
 const LeftColumn = styled.div`

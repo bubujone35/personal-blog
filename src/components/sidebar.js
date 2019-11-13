@@ -17,7 +17,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media all and (max-width: 1250px) {
-  
+
     flex-direction: column;
   }
 `
@@ -58,22 +58,18 @@ const Content = styled.div`
   }
 `
 
-// //////////////////////////////////////
-// Sidebar navigation links
-const NavWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media all and (max-width: 1250px) {
-    flex-direction: row;
-  }
-`
-
 const SideNav = styled.ul`
   font-size: 1.8rem;
   list-style: none;
   margin-top: 3.5rem;
   flex-grow: 2;
+
+  @media all and (max-width: 1250px) {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+  }
 `
 const SideNavItem = styled.li`
   position: relative;
@@ -107,6 +103,10 @@ const Icon = styled.svg`
   height: 3rem;
   margin-right: 1.5rem;
   fill: currentColor;
+
+  @media all and (max-width: 6500px) {
+    display: none;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -150,7 +150,6 @@ const Sidebar = () => (
         My name is Ryan Lee
       </Content>
     </Intro>
-    <NavWrapper>
     <SideNav>
       <SideNavItem>
         <StyledLink to="/">
@@ -171,7 +170,6 @@ const Sidebar = () => (
         </StyledLink>
       </SideNavItem>
     </SideNav>
-    </NavWrapper>
     <Legal>&copy; 2019 All rights reserved.</Legal>
   </Container>
 )
