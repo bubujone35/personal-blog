@@ -8,7 +8,7 @@ import headshot from '../../images/headshot.jpg'
 
 const Container = styled.div`
   display: flex;
-  background: #FCFCFC;
+  background: white;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
@@ -18,9 +18,7 @@ const Container = styled.div`
   min-width: 400px;
 
   @media all and (max-width: 1250px) {
-    flex-direction: column-reverse;
-    border-radius: 0px;
-    border: none;
+    /* flex-direction: column-reverse; */
   }
 `
 const LeftColumn = styled.div`
@@ -28,13 +26,15 @@ const LeftColumn = styled.div`
   flex: 0 0 60%;
   display: flex;
   flex-direction: column;
+  margin-right: 1rem;
+
 `
 const RightColumn =  styled.div`
   background-color: white;
   color: white;
-  flex: 1;
+  flex: 1 auto;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   padding: 2rem;
   flex-direction: column;
@@ -42,6 +42,8 @@ const RightColumn =  styled.div`
   @media all and (max-width: 1250px) {
     padding: 0;
     align-items: start;
+    justify-content: start;
+
   }
  `
 const Header = styled.div`
@@ -54,6 +56,10 @@ const Title = styled(Link)`
   color: black;
   font-weight: 700;
 
+  @media all and (max-width: 800px) {
+    font-size: 3rem;
+  }
+
   &:hover {
     color: gray;
   }
@@ -62,12 +68,24 @@ const Title = styled(Link)`
 const Subtitle = styled.h3`
   font-size: 2rem;
   font-weight: 300;
+
+  @media all and (max-width: 1250px) {
+    font-size: 1.75rem;
+
+  }
 `
 const Meta = styled.div`
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media all and (max-width: 800px) {
+    flex-direction: column;
+    display: flex;
+    align-items: start
+  }
+
 `
 
 const Hashtags = styled.div`
@@ -100,6 +118,7 @@ const Stars = styled.svg`
     width: 2rem;
     height: 2rem;
     margin-bottom: 0.4rem;
+    margin-top: 1rem; 
 
   }
 `
@@ -109,11 +128,15 @@ const Content = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
   margin: 1rem 0;
+
+  @media all and (max-width: 700px) {
+    display: none;
+  }
 `
 const Footer = styled.div`
   background-color: white;
   padding: 1rem 0;
-  margin-top: 1rem; 
+  margin-top: 1rem;
 `
 const Image = styled.img`
   border-radius: 12px;
@@ -129,13 +152,13 @@ const PreviewCard = props => (
     <Container>
       <LeftColumn>
         <Header>
-          <Title to="/">This is the title</Title>
-          <Subtitle>Here is a subtitle</Subtitle>
+          <Title to="/">My Amends</Title>
+          <Subtitle>For what it's worth, the realest thing I ever wrote.</Subtitle>
           <Meta>
             <Hashtags>
-              <Tag>#Regular</Tag>
-              <Tag>#Medium</Tag>
-              <Tag>#Large</Tag>
+              <Tag>#Motivation</Tag>
+              <Tag>#MyStory</Tag>
+              <Tag>#Entrepraneur</Tag>
             </Hashtags>
             <Icons>
               <Stars><FaStar size={20}/></Stars>
@@ -146,7 +169,7 @@ const PreviewCard = props => (
           </Meta>
         </Header>
         <Content>
-          <p>Dolore magna aliquam erat volutpat ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper. Typi qui nunc nobis videntur parum clari fiant sollemnes in. Feugiat nulla facilisis at vero eros et accumsan et iusto odio. Dolore magna aliquam erat volutpat ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper. Typi qui nunc nobis videntur parum clari fiant sollemnes in. Feugiat nulla facilisis at vero eros et accumsan et iusto odio.</p>
+          <p>Dolore magna aliquam erat volutpat ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper. Typi qui nunc nobis videntur parum clari fiant sollemnes in. Feugiat nulla facilisis at vero eros et accumsan et iusto odio. </p>
         </Content>
         <Footer>
           <SecondaryButton>Read More</SecondaryButton>

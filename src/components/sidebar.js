@@ -32,7 +32,7 @@ const Intro = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding: 3rem;
+  padding: 2rem;
   margin-top: 3rem;
   @media all and (max-width: 1250px) {
     order: 1;
@@ -75,7 +75,7 @@ const SideNav = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: start;
-    margin-left: 3rem; 
+    margin-left: 3rem;
   }
 `
 const SideNavItem = styled.li`
@@ -105,6 +105,7 @@ const StyledLink = styled(Link)`
   z-index: 10;
   position: relative;
   margin-right: 1rem;
+  margin-left: 1rem; 
   &:hover {
     color: lightgray;
   }
@@ -142,7 +143,8 @@ const Sidebar = () => (
         Dr. Ryan Lee
       </Name>
       <Content>
-        My name is Ryan Lee
+        This is a personal project to explore using Gatsby and styled components
+        to create a blog and portfolio page.
       </Content>
     </Intro>
     <SideNav>

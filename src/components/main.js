@@ -11,7 +11,8 @@ const Container = styled.div`
   align-items: center;
 
   @media all and (max-width: 1250px) {
-    padding: 4rem 0 0;
+    padding: 0.5rem;
+    padding-top: 6rem; 
   }
 `
 
