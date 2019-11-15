@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PreviewCard from "./cards/preview-card"
+import PreviewCard from "./cards/preview-card";
 
 const Container = styled.div`
   display: flex;
@@ -19,6 +19,7 @@ const Container = styled.div`
 const Main = () => (
   <Container>
     <PreviewCard
+      link="post1"
       title="My Ammends"
       subtitle="The realist thing I ever wrote."
       tag1="mystory"
@@ -28,8 +29,9 @@ const Main = () => (
     />
 
     <PreviewCard
+      page="/"
       title="This is another post"
-      subtitle="To test out dynamic rendering of props"
+      subtitle="To test out dynamic rendering of props."
       tag1="anothertag"
       tag2="supertag"
       tag3="awesome"

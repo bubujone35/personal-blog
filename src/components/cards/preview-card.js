@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { FaStar } from 'react-icons/fa';
-import SecondaryButton from '../buttons/secondary'
-import headshot from '../../images/headshot.jpg'
+import SecondaryButton from '../buttons/secondary';
+import headshot from '../../images/headshot.jpg';
 
 const Container = styled.div`
   display: flex;
@@ -169,12 +169,16 @@ const Image = styled.img`
     margin: 0;
   }
 `
+const PageLink = styled(Link)`
+  text-decoration: none;
+`
+
 const PreviewCard = props => (
   <>
     <Container>
       <LeftColumn>
         <Header>
-          <Title to="/">{props.title}</Title>
+          <Title to={props.link}>{props.title}</Title>
           <Subtitle>{props.subtitle}</Subtitle>
           <Meta>
             <Hashtags>
@@ -194,7 +198,11 @@ const PreviewCard = props => (
           {props.content}
         </Content>
         <Footer>
-          <SecondaryButton>Read More</SecondaryButton>
+          <SecondaryButton>
+            <PageLink to={props.link}>
+              Link
+            </PageLink>
+          </SecondaryButton>
         </Footer>
       </LeftColumn>
       <RightColumn>
