@@ -27,6 +27,15 @@ const Main = () => (
       content="This is test content inside of the testCard component. The cards grow based upon content within and stay the same height based on the tallest card."
     />
 
+    <PreviewCard
+      title="This is another post"
+      subtitle="To test out dynamic rendering of props"
+      tag1="anothertag"
+      tag2="supertag"
+      tag3="awesome"
+      content="This is to test if you can post another blog preview card. I hope it works and I hope you enjoy how it looks too! I am going to add more content for asthetics sake. Should figure out a max word count for preview."
+    />
+
   </Container>
 )
 

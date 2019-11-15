@@ -105,7 +105,7 @@ const StyledLink = styled(Link)`
   z-index: 10;
   position: relative;
   margin-right: 1rem;
-  margin-left: 1rem; 
+  margin-left: 1rem;
   &:hover {
     color: lightgray;
   }
@@ -155,13 +155,13 @@ const Sidebar = () => (
         </StyledLink>
       </SideNavItem>
       <SideNavItem>
-        <StyledLink to="/">
+        <StyledLink to="/about">
           <Icon><FaAddressCard size={32}/></Icon>
           About
         </StyledLink>
       </SideNavItem>
       <SideNavItem>
-        <StyledLink to="/">
+        <StyledLink to="/contact">
           <Icon><FaEnvelope size={32}/></Icon>
           Contact
         </StyledLink>

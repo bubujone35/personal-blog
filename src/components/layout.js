@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
     display: flex;
     max-width: 120rem;
     margin: 4rem auto;
-    background-color: orangered;
+    background-color: none;
 
     flex-flow: row-wrap;
 
@@ -45,7 +45,6 @@ const Layout = ({ children }) => {
       <Container>
         <Sidebar/>
           <main>{children}</main>
-        <Main/>
       </Container>
     </>
   )
