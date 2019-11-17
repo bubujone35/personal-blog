@@ -7,7 +7,7 @@ import headshot from '../../images/headshot.jpg';
 
 const Container = styled.div`
   display: flex;
-  background: white;
+  background: var(--primary-white-1);
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
@@ -22,16 +22,12 @@ const Container = styled.div`
 `
 
 const LeftColumn = styled.div`
-  background-color: white;
   flex: 0 0 60%;
   display: flex;
   flex-direction: column;
   margin-right: 1rem;
-
 `
 const RightColumn =  styled.div`
-  background-color: white;
-  color: white;
   flex: 1 auto;
   display: flex;
   align-items: start;
@@ -47,8 +43,7 @@ const RightColumn =  styled.div`
   }
  `
 const Header = styled.div`
-  background-color: white;
-  color: black;
+  color: --var(--medium-gray-1);
 `
 const Title = styled(Link)`
   font-size: 4rem;
@@ -96,9 +91,10 @@ const Tag1 = styled(Link)`
   margin: .2rem;
   color: var(--primary-blue-1);
   font-weight: 700;
+  letter-spacing: 0.03rem;
 
   &:hover {
-    color: gray;
+    color: var(--secondary-blue-1);
     cursor: pointer;
   }
 `
@@ -107,9 +103,10 @@ const Tag2 = styled(Link)`
   margin: .2rem;
   color: var(--primary-blue-1);
   font-weight: 700;
+  letter-spacing: 0.03rem;
 
   &:hover {
-    color: gray;
+    color: var(--secondary-blue-1);
     cursor: pointer;
   }
 `
@@ -118,9 +115,10 @@ const Tag3 = styled(Link)`
   margin: .2rem;
   color: var(--primary-blue-1);
   font-weight: 700;
+  letter-spacing: 0.03rem;
 
   &:hover {
-    color: gray;
+    color: var(--secondary-blue-1);
     cursor: pointer;
   }
 `
@@ -171,6 +169,11 @@ const Image = styled.img`
 `
 const PageLink = styled(Link)`
   text-decoration: none;
+  color: var(--primary-blue-1);
+
+  &:hover {
+    color: var(--secondary-blue-1);
+  }
 `
 
 const PreviewCard = props => (
@@ -200,7 +203,7 @@ const PreviewCard = props => (
         <Footer>
           <SecondaryButton>
             <PageLink to={props.link}>
-              Link
+              Read More
             </PageLink>
           </SecondaryButton>
         </Footer>

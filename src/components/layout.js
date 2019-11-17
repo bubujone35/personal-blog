@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import Main from "./main"
 import Sidebar from "./sidebar"
 
 import "./layout.css"
@@ -34,7 +33,7 @@ const Layout = ({ children }) => {
     flex-flow: row-wrap;
 
     @media all and (max-width: 1250px) {
-      margin: 0;
+      margin: auto;
       flex-direction: column;
     }
   `

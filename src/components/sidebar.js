@@ -6,6 +6,11 @@ import { FaAddressCard } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import avatar from '../images/headshot.png'
 
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaMediumM } from "react-icons/fa";
+
 const Container = styled.div`
   flex: 0 0 18%;
   background-color: white;
@@ -132,6 +137,43 @@ const Legal = styled.div`
     display: none;
   }
 `
+const Social = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: none;
+  align-items: start;
+
+  @media all and (max-width: 1250px) {
+    display: none;
+  }
+`
+const StyledSocial = styled.a`
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 1em;
+  transition:.3s;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.3s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+
+  &:hover {
+    color: var(--secondary-blue-1);
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    }
+  }
+`
 
 const Sidebar = () => (
   <Container>
@@ -147,6 +189,24 @@ const Sidebar = () => (
         to create a blog and portfolio page.
       </Content>
     </Intro>
+
+    <Social>
+      <StyledSocial href="https://www.linkedin.com/company/careqik" target="_blank" rel="noopener noreferrer" title="LinkedIn"><FaLinkedinIn size={26}/>
+      </StyledSocial>
+
+      <StyledSocial href="https://www.facebook.com/Careqik-2739261906084783" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <FaFacebookF size={26}/>
+      </StyledSocial>
+
+      <StyledSocial href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <FaInstagram size={26}/>
+      </StyledSocial>
+
+      <StyledSocial href="https://www.medium.com" target="_blank" rel="noopener noreferrer" title="Medium">
+          <FaMediumM size={26}/>
+      </StyledSocial>
+    </Social>
+
     <SideNav>
       <SideNavItem>
         <StyledLink to="/">

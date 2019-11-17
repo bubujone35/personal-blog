@@ -6,8 +6,10 @@
 :root {
   --medium-gray-1: rgba(0, 0, 0, 0.8);
   --light-gray-1: rgba(0, 0, 0, 0.2);
+  --primary-white-1: #FCFCFC;
 
-  --primary-blue-1: #5A8FF7; 
+  --primary-blue-1: #5A8FF7;
+  --secondary-blue-1: rgba(70, 108, 183, 1); 
 }
 
 *,

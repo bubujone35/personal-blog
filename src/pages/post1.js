@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+import MainCard from "../components/cards/main-card"
+
 const Container = styled.div`
   display: flex;
   flex: 1;
@@ -22,7 +24,7 @@ const Post1 = () => (
   <Layout>
     <SEO title="First Post" />
     <Container>
-      This is the Post1 page.
+      <MainCard/>
     </Container>
   </Layout>
 )
