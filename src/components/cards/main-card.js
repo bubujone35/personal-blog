@@ -32,6 +32,7 @@ const Title = styled(Link)`
   text-decoration: none;
   color: var(--medium-gray-1);
   font-weight: 700;
+  padding-top: 1rem;
 
   @media all and (max-width: 800px) {
     font-size: 3rem;
@@ -47,7 +48,7 @@ const SubTitle = styled.h3`
   font-weight: 300;
 `
 const Meta = styled.div`
-  background-color: white;
+  background-color: var(--primary-white-1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,13 +122,36 @@ const Stars = styled.svg`
   }
 `
 const Content = styled.div`
-  display: flex
-`
-const Column1 = styled.div`
-  margin-right: 3rem;
-`
-const Column2 = styled.div`
+  background-color: var(--primary-white-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  @media all and (max-width: 800px) {
+    flex-direction: column;
+    display: flex;
+    align-items: start
+  }
+ `
+
+const Column1 = styled.p`
+  margin-right: 3rem;
+  border-bottom: 1px solid var(--light-gray-1);
+  border-top: 1px solid var(--light-gray-1);
+
+  @media all and (max-width: 800px) {
+    margin-bottom: 1.5rem;
+    border-bottom: none;
+  }
+
+`
+const Column2 = styled.p`
+  border-bottom: 1px solid var(--light-gray-1);
+  border-top: 1px solid var(--light-gray-1);
+
+  @media all and (max-width: 800px) {
+    border-top: none;
+  }
 `
 
 const MainCard = props => (
@@ -155,7 +179,6 @@ const MainCard = props => (
         <Column1>
         Odio dignissim qui blandit praesent, luptatum zzril delenit augue duis. Commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit esse. Nulla facilisis at vero eros et accumsan et iusto dolore te.
         Odio dignissim qui blandit praesent, luptatum zzril delenit augue duis. Commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit esse. Nulla facilisis at vero eros et accumsan et iusto dolore te.
-
         </Column1>
         <Column2>
         Odio dignissim qui blandit praesent, luptatum zzril delenit augue duis. Commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate velit esse. Nulla facilisis at vero eros et accumsan et iusto dolore te.

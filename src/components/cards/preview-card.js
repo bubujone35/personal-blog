@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { FaStar } from 'react-icons/fa';
 import SecondaryButton from '../buttons/secondary';
-import headshot from '../../images/headshot.jpg';
+import bridge from '../../images/bridge.jpg';
+
 
 const Container = styled.div`
   display: flex;
@@ -37,9 +38,6 @@ const RightColumn =  styled.div`
 
   @media all and (max-width: 1250px) {
     padding: 0;
-    align-items: start;
-    justify-content: start;
-
   }
  `
 const Header = styled.div`
@@ -74,7 +72,8 @@ const Meta = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  margin-top: 2rem;
+  margin-bottom: 2rem; 
   @media all and (max-width: 800px) {
     flex-direction: column;
     display: flex;
@@ -209,7 +208,7 @@ const PreviewCard = props => (
         </Footer>
       </LeftColumn>
       <RightColumn>
-        <Image src={headshot}/>
+        <Image src={bridge}/>
       </RightColumn>
     </Container>
   </>
