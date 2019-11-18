@@ -38,6 +38,9 @@ const RightColumn =  styled.div`
 
   @media all and (max-width: 1250px) {
     padding: 0;
+    align-items: start;
+    justify-content: start;
+
   }
  `
 const Header = styled.div`
@@ -72,8 +75,7 @@ const Meta = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem; 
+
   @media all and (max-width: 800px) {
     flex-direction: column;
     display: flex;
