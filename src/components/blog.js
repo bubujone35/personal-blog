@@ -27,7 +27,10 @@ const getMarkdownPosts = graphql `
         id
         frontmatter {
           title
-          date
+          subtitle
+          tag1
+          tag2
+          tag3
         }
         excerpt
       }
@@ -43,13 +46,16 @@ const Blog = () => (
       render={data => (
         <>
           {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
             <PreviewCard
               title={node.frontmatter.title}
-              meta={node.frontmatter.date}
               subtitle={node.frontmatter.subtitle}
+              tag1={node.frontmatter.tag1}
+              tag2={node.frontmatter.tag2}
+              tag3={node.frontmatter.tag3}
               content={node.excerpt}
-
             />
+          </div>
           ))}
         </>
       )}
