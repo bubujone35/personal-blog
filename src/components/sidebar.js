@@ -208,8 +208,14 @@ const Sidebar = () => (
     </Social>
 
     <SideNav>
+    <SideNavItem>
+      <StyledLink to="/">
+        <Icon><FaNewspaper size={32}/></Icon>
+        Home
+      </StyledLink>
+    </SideNavItem>
       <SideNavItem>
-        <StyledLink to="/">
+        <StyledLink to="/articles">
           <Icon><FaNewspaper size={32}/></Icon>
           Articles
         </StyledLink>
